@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   
-  use('mg979/vim-visual-multi')
+  --use('mg979/vim-visual-multi')
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.6',
   -- or                            , branch = '0.1.x',
@@ -18,15 +18,28 @@ return require('packer').startup(function(use)
 	as = 'rose-pine',
 	config = function()
 		vim.cmd('colorscheme rose-pine')
-		vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
-		vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
 	end
   })
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
-  use('nvim-lua/plenary.nvim')
-  use('hrsh7th/nvim-cmp')
+  use {
+  'nvim-treesitter/nvim-treesitter',
+  run = function()
+        require('nvim-treesitter.install').update({ with_sync = true })
+    end,
+  config = function()
+    require'nvim-treesitter'.setup {
+      install_dir = vim.fn.stdpath('data') .. '/site',
+
+      ensure_installed = { "help", "c", "lua", "go", "javascript", "typescript", "python" },
+      sync_install = false,
+      auto_install = true,
+      
+      highlight = { enable = true },
+      indent = { enable = true },
+    }
+  end
+}
+
   use {
 	"ThePrimeagen/harpoon",
 	branch = "harpoon2",
@@ -34,21 +47,13 @@ return require('packer').startup(function(use)
   }
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use {
-  		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
-		requires = {
-		{'williamboman/mason.nvim'},
-		{'williamboman/mason-lspconfig.nvim'},
-
-		-- LSP Support
-		{'neovim/nvim-lspconfig'},
-		-- Autocompletion
-		{'hrsh7th/nvim-cmp'},
-		{'hrsh7th/cmp-nvim-lsp'},
-		{'L3MON4D3/LuaSnip'},
-		}
-      }
+  use('nvim-lua/plenary.nvim')
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/LuaSnip'
   use {
         'brenton-leighton/multiple-cursors.nvim',
         config = function()

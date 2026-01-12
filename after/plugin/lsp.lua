@@ -1,4 +1,4 @@
-local lsp = require("lsp-zero")
+--[[local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 local cmp = require('cmp')
@@ -28,3 +28,4 @@ require('mason-lspconfig').setup({
 })
 
 lsp.setup()
+]]
