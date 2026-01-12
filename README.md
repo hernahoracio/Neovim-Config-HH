@@ -38,8 +38,3 @@ I'm using the 2026 rewrite of `nvim-treesitter` to provide syntax highlighting a
 ### Autocompletion
 Driven by `nvim-cmp` with integration for LSP and snippets. 
 
-
-```bash
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
-
