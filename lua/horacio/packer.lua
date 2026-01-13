@@ -24,13 +24,11 @@ return require('packer').startup(function(use)
   use {
   'nvim-treesitter/nvim-treesitter',
   run = function()
-        require('nvim-treesitter.install').update({ with_sync = true })
+        require'nvim-treesitter'.install { 'go', 'javascript', 'typescript', 'lua', 'python', 'zig' }
     end,
   config = function()
     require'nvim-treesitter'.setup {
       install_dir = vim.fn.stdpath('data') .. '/site',
-
-      ensure_installed = { "help", "c", "lua", "go", "javascript", "typescript", "python" },
       sync_install = false,
       auto_install = true,
       
@@ -40,6 +38,12 @@ return require('packer').startup(function(use)
       },
       indent = { enable = true },
     }
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = { "go", "gomod" },
+      callback = function()
+        vim.treesitter.start()
+      end,
+    })
   end
 }
 
