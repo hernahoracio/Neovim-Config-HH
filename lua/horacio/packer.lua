@@ -34,7 +34,10 @@ return require('packer').startup(function(use)
       sync_install = false,
       auto_install = true,
       
-      highlight = { enable = true },
+      highlight = { 
+          enable = true,
+          additional_vim_regex_highlighting = false,
+      },
       indent = { enable = true },
     }
   end
@@ -51,8 +54,13 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+  use 'saadparwaiz1/cmp_luasnip'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+
+
   use 'L3MON4D3/LuaSnip'
   use {
         'brenton-leighton/multiple-cursors.nvim',
