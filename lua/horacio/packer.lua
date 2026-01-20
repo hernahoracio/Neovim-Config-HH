@@ -1,4 +1,4 @@
-vim.cmd [[packadd packer.nvim]]
+ vim.cmd [[packadd packer.nvim]]
 
 
 
@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
   use {
   'nvim-treesitter/nvim-treesitter',
   run = function()
-        require'nvim-treesitter'.install { 'go', 'javascript', 'typescript', 'lua', 'python', 'zig' }
+        require'nvim-treesitter'.install { 'go', 'javascript', 'typescript', 'tsx', 'lua', 'python', 'zig' }
     end,
   config = function()
     require'nvim-treesitter'.setup {
@@ -38,12 +38,13 @@ return require('packer').startup(function(use)
       },
       indent = { enable = true },
     }
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = { "go", "gomod" },
-      callback = function()
-        vim.treesitter.start()
-      end,
-    })
+
+    vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+        pattern = { "*.go", "*.ts", "*.tsx", "*.js", "*.jsx", "*.lua" },
+        callback = function()
+        pcall(vim.treesitter.start)
+  end,
+})
   end
 }
 
@@ -63,9 +64,26 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
-
-
   use 'L3MON4D3/LuaSnip'
+
+  --avante setup
+  use 'MunifTanjim/nui.nvim'
+  use 'MeanderingProgrammer/render-markdown.nvim'
+  use 'nvim-tree/nvim-web-devicons' -- or use 'echasnovski/mini.icons'
+  use 'HakonHarnes/img-clip.nvim'
+  use 'zbirenbaum/copilot.lua'
+  use 'stevearc/dressing.nvim' -- for enhanced input UI
+  use 'folke/snacks.nvim' -- for modern input UI
+
+  -- Avante.nvim with build process
+  use {
+    'yetone/avante.nvim',
+    branch = 'main',
+    run = 'make',
+  }
+
+
+
   use {
         'brenton-leighton/multiple-cursors.nvim',
         config = function()
