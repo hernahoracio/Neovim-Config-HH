@@ -1,6 +1,7 @@
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 
+
 telescope.setup({
   defaults = {
     -- Completely disable treesitter highlighting in previews
