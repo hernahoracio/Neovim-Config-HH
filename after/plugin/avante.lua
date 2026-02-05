@@ -1,18 +1,12 @@
 require('avante').setup({
-  provider = "claude",
-  mode = "agentic",
-  auto_suggestions_provider = "claude",
-  providers = {
-    claude = {
-      endpoint = "https://api.anthropic.com",
-      model = "claude-3-5-sonnet-20241022",
-      timeout = 30000,
-      extra_request_body = {
-        temperature = 0,
-        max_tokens = 4096,
-      },
-    },
+  provider = "copilot",
+  auto_suggestions_provider = "copilot",
+  behaviour = {
+    auto_suggestions = false,
   },
+  -- You don't need a "providers = { copilot = ... }" block unless 
+  -- you want to change the specific model (e.g., to o1 or gpt-4o).
+  -- By default, it will use your Org's default model.
 
   mappings = {
     diff = {

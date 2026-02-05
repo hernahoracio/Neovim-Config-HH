@@ -135,7 +135,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["multiple-cursors.nvim"] = {
-    config = { "\27LJ\2\nï\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\thint\1\0\2\venable\2\18show_on_start\2\1\0\3\thint\0\24default_keybindings\2\15updatetime\3ñ\1\nsetup\21multiple-cursors\frequire\0" },
+    config = { "\27LJ\2\nï\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\thint\1\0\2\18show_on_start\2\venable\2\1\0\3\thint\0\24default_keybindings\2\15updatetime\3ñ\1\nsetup\21multiple-cursors\frequire\0" },
     loaded = true,
     path = "/Users/horacioherna/.local/share/nvim/site/pack/packer/start/multiple-cursors.nvim",
     url = "https://github.com/brenton-leighton/multiple-cursors.nvim"
@@ -156,7 +156,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
-    config = { "\27LJ\2\n:\0\0\3\0\4\0\0066\0\0\0006\2\1\0009\2\2\0029\2\3\2B\0\2\1K\0\1\0\nstart\15treesitter\bvim\npcall»\3\1\0\6\0\22\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0006\3\3\0009\3\4\0039\3\5\3'\5\6\0B\3\2\2'\4\a\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\r\2B\0\2\0016\0\3\0009\0\14\0009\0\15\0005\2\16\0005\3\18\0005\4\17\0=\4\19\0033\4\20\0=\4\21\3B\0\3\1K\0\1\0\rcallback\0\fpattern\1\0\2\rcallback\0\fpattern\0\1\a\0\0\t*.go\t*.ts\n*.tsx\t*.js\n*.jsx\n*.lua\1\3\0\0\16BufReadPost\15BufNewFile\24nvim_create_autocmd\bapi\vindent\1\0\1\venable\2\14highlight\1\0\2\venable\2&additional_vim_regex_highlighting\1\16install_dir\1\0\5\vindent\0\17sync_install\1\17auto_install\2\14highlight\0\16install_dir\0\n/site\tdata\fstdpath\afn\bvim\nsetup\20nvim-treesitter\frequire\0" },
+    config = { "\27LJ\2\n:\0\0\3\0\4\0\0066\0\0\0006\2\1\0009\2\2\0029\2\3\2B\0\2\1K\0\1\0\nstart\15treesitter\bvim\npcall»\3\1\0\6\0\22\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0006\3\3\0009\3\4\0039\3\5\3'\5\6\0B\3\2\2'\4\a\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\r\2B\0\2\0016\0\3\0009\0\14\0009\0\15\0005\2\16\0005\3\18\0005\4\17\0=\4\19\0033\4\20\0=\4\21\3B\0\3\1K\0\1\0\rcallback\0\fpattern\1\0\2\fpattern\0\rcallback\0\1\a\0\0\t*.go\t*.ts\n*.tsx\t*.js\n*.jsx\n*.lua\1\3\0\0\16BufReadPost\15BufNewFile\24nvim_create_autocmd\bapi\vindent\1\0\1\venable\2\14highlight\1\0\2&additional_vim_regex_highlighting\1\venable\2\16install_dir\1\0\5\17auto_install\2\17sync_install\1\16install_dir\0\14highlight\0\vindent\0\n/site\tdata\fstdpath\afn\bvim\nsetup\20nvim-treesitter\frequire\0" },
     loaded = true,
     path = "/Users/horacioherna/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
@@ -210,18 +210,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\4\0\0066\0\0\0006\2\1\0009\2\2\0029\2\3\2B\0\2\1K\0\1\0\nstart\15treesitter\bvim\npcall»\3\1\0\6\0\22\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0006\3\3\0009\3\4\0039\3\5\3'\5\6\0B\3\2\2'\4\a\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\r\2B\0\2\0016\0\3\0009\0\14\0009\0\15\0005\2\16\0005\3\18\0005\4\17\0=\4\19\0033\4\20\0=\4\21\3B\0\3\1K\0\1\0\rcallback\0\fpattern\1\0\2\fpattern\0\rcallback\0\1\a\0\0\t*.go\t*.ts\n*.tsx\t*.js\n*.jsx\n*.lua\1\3\0\0\16BufReadPost\15BufNewFile\24nvim_create_autocmd\bapi\vindent\1\0\1\venable\2\14highlight\1\0\2&additional_vim_regex_highlighting\1\venable\2\16install_dir\1\0\5\17auto_install\2\17sync_install\1\16install_dir\0\14highlight\0\vindent\0\n/site\tdata\fstdpath\afn\bvim\nsetup\20nvim-treesitter\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: multiple-cursors.nvim
 time([[Config for multiple-cursors.nvim]], true)
-try_loadstring("\27LJ\2\nï\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\thint\1\0\2\venable\2\18show_on_start\2\1\0\3\thint\0\24default_keybindings\2\15updatetime\3ñ\1\nsetup\21multiple-cursors\frequire\0", "config", "multiple-cursors.nvim")
+try_loadstring("\27LJ\2\nï\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\thint\1\0\2\18show_on_start\2\venable\2\1\0\3\thint\0\24default_keybindings\2\15updatetime\3ñ\1\nsetup\21multiple-cursors\frequire\0", "config", "multiple-cursors.nvim")
 time([[Config for multiple-cursors.nvim]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\4\0\0066\0\0\0006\2\1\0009\2\2\0029\2\3\2B\0\2\1K\0\1\0\nstart\15treesitter\bvim\npcall»\3\1\0\6\0\22\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0006\3\3\0009\3\4\0039\3\5\3'\5\6\0B\3\2\2'\4\a\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\r\2B\0\2\0016\0\3\0009\0\14\0009\0\15\0005\2\16\0005\3\18\0005\4\17\0=\4\19\0033\4\20\0=\4\21\3B\0\3\1K\0\1\0\rcallback\0\fpattern\1\0\2\rcallback\0\fpattern\0\1\a\0\0\t*.go\t*.ts\n*.tsx\t*.js\n*.jsx\n*.lua\1\3\0\0\16BufReadPost\15BufNewFile\24nvim_create_autocmd\bapi\vindent\1\0\1\venable\2\14highlight\1\0\2\venable\2&additional_vim_regex_highlighting\1\16install_dir\1\0\5\vindent\0\17sync_install\1\17auto_install\2\14highlight\0\16install_dir\0\n/site\tdata\fstdpath\afn\bvim\nsetup\20nvim-treesitter\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

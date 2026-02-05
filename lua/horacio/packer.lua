@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
   use 'MeanderingProgrammer/render-markdown.nvim'
   use 'nvim-tree/nvim-web-devicons' -- or use 'echasnovski/mini.icons'
   use 'HakonHarnes/img-clip.nvim'
-  use 'zbirenbaum/copilot.lua'
+  use "zbirenbaum/copilot.lua"
   use 'stevearc/dressing.nvim' -- for enhanced input UI
   use 'folke/snacks.nvim' -- for modern input UI
 
@@ -80,6 +80,9 @@ return require('packer').startup(function(use)
     'yetone/avante.nvim',
     branch = 'main',
     run = 'make',
+    requires = {
+    "zbirenbaum/copilot.lua",
+    }
   }
 
 
