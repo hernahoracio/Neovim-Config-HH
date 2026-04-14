@@ -37,6 +37,19 @@ return {
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
+
+      opts.enabled = function()
+        -- Get the current buffer type (e.g., 'prompt', 'nofile')
+        local buftype = vim.api.nvim_get_option_value("buftype", { buf = 0 })
+
+        -- Disable in prompt buffers (Avante uses these for the input window)
+        if buftype == "prompt" then
+          return false
+        end
+
+        -- Default: stay enabled in normal code files
+        return true
+      end
     end,
   },
 

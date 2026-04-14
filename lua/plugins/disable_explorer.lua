@@ -15,10 +15,6 @@ return {
     },
   },
   {
-    "echasnovski/mini.files",
-    enabled = false,
-  },
-  {
     "nvim-mini/mini.files",
     enabled = false,
   },
@@ -31,6 +27,3 @@ return {
     enabled = false,
   },
 }
-
-
-
