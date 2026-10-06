@@ -6,7 +6,13 @@ return {
   },
   cmd = "Neogit",
   keys = {
-    { "<leader>gn", "<cmd>Neogit<cr>", desc = "Open Neogit" },
+    {
+      "<leader>gn",
+      function()
+        require("neogit").open()
+      end,
+      desc = "Open Neogit",
+    },
   },
   opts = {},
 }
